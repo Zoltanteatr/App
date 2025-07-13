@@ -1,0 +1,39 @@
+services:
+  db:
+    container_name: arcanum_db_postgres
+    image: postgres
+    environment:
+      - POSTGRES_DB=${PGSQL_NAME}
+      - POSTGRES_USER=${PGSQL_USER}
+      - POSTGRES_PASSWORD=${PGSQL_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - ${PGSQL_PORT}:5432
+    volumes:
+      - .pgdata:/var/lib/postgresql/data
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server --address "0.0.0.0:${MINIO_PORT}" /data
+    volumes:
+      - .minio:/data
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ACCESS_KEY}
+      - MINIO_ROOT_PASSWORD=${MINIO_SECRET_KEY}
+    ports:
+      - ${MINIO_PORT}:9000
+      - ${MINIO_CONSOLE_PORT}:9001
+  app:
+    container_name: arcanum_backend
+    build: ./
+    depends_on:
+      - minio
+      - db
+    ports:
+      - ${APP_PORT}:8000
+    environment:
+      - PGSQL_HOST=db
+      - MINIO_HOST=minio
+    restart: always
+    env_file:
+      - .env
