@@ -1,0 +1,85 @@
+.main {
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+
+  .video__background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+  }
+
+  .intro__page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 220px;
+    z-index: 1;
+
+    .main__title {
+      font-size: 65px;
+      font-weight: 500;
+      font-family: 'Playfair Display', serif;
+      width: 100%;
+      text-align: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(to right, #de8a15b8, #fff);
+    }
+
+    .main__description {
+      width: 100%;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-top: 10px;
+      color: #ffffff99;
+      letter-spacing: 0.5px;
+    }
+
+    .team__info {
+      width: 100%;
+      display: flex;
+      height: fit-content;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .team__name {
+        color: #ffffff8f;
+        margin-right: 93px;
+        margin-top: 10px;
+      }
+
+      .team__logo {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-left: 93px;
+      }
+    }
+  }
+}

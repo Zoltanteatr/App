@@ -1,0 +1,108 @@
+.support {
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #030404;
+  padding-top: 50px;
+  padding-bottom: 90px;
+  font-family: "Playfair Display", serif;
+
+  .support__body {
+    width: 90vw;
+    height: 90%;
+    border: 2px solid #f8c37b0a;
+    background: linear-gradient(to left, #1a1c1d75, #1a1c1d60);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    border-radius: 27px;
+
+    .support__header {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background: #50565629;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .header__avatar {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+
+      .support__title {
+        color: #fff;
+        font-size: 17px;
+      }
+    }
+
+    .body__messages {
+      padding: 16px;
+      display: flex;
+      flex-flow: column;
+      gap: 16px;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      padding-bottom: 10px;
+      overflow-x: hidden;
+    }
+
+    .image__wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .support__footer {
+      width: 100%;
+      display: flex;
+      height: fit-content;
+      align-items: center;
+      position: relative;
+
+      .send,
+      .clip {
+        position: absolute;
+        right: 60px;
+        height: 30px;
+        width: 30px;
+      }
+
+      .clip {
+        right: 20px;
+        pointer-events: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.connectButton {
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  background: linear-gradient(to top, #1c1d20, #1c1d20) padding-box, linear-gradient(to bottom, rgba(255, 188, 95, 0.87), rgba(153, 113, 57, 0.47)) border-box;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: #276ad8;
+  }
+}

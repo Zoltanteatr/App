@@ -1,0 +1,115 @@
+.game__swiper {
+  width: 100%;
+  padding-bottom: 100px;
+  margin-top: 20px;
+  position: relative;
+  padding-right: 20px;
+
+  :global {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #ffbc5f;
+      background: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+
+      }
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #ffbc5f;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+
+      &-active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.game {
+  width: 100%;
+  height: fit-content;
+
+  background: #0f0f0f37;
+  border-radius: 20px;
+  backdrop-filter: blur(34px);
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+
+  .game__date {
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff7a;
+    font-size: 12px;
+  }
+
+  .game__preview {
+    background: #1a1c1db5;
+    width: 100%;
+    margin-top: 5px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background-color: #1C1D20;
+  }
+
+  .game__btns {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+  }
+}
+
+.game__name {
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.slide {
+  margin-top: 20px;
+  width: auto;
+  transition: transform 0.3s ease;
+
+  .game__preview {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
+}

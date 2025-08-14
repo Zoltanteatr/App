@@ -1,0 +1,149 @@
+.demo__game {
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #030404;
+  padding-top: 80px;
+  align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  .game__title {
+    color: #fff;
+  }
+
+  .blur__image,
+  .blur__image__sec {
+    width: 360px;
+    position: absolute;
+    height: 800px;
+    left: -150px;
+    bottom: 50px;
+    z-index: 0;
+  }
+
+  .blur__image__sec {
+    left: 150px;
+    top: 190px;
+    rotate: 180deg;
+  }
+
+  .game__description {
+    color: #c2c2c2;
+    font-size: 14px;
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+  }
+
+  .videoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .video__subtitle {
+      margin-top: 20px;
+      color: #ffffff7d;
+      font-size: 12px;
+      text-align: center;
+      width: 70%;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-family: "mont";
+    }
+
+    .demoGame__video {
+      margin-top: 20px;
+      width: 90%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .demoGame__controls {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    .answer__button {
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to right, #ffbc5f, #e9e9e9) padding-box,
+        linear-gradient(to bottom, #ffbc5fdd, #99713977) border-box;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      color: #fff;
+      font-family: "mont";
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.game__controlls {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  .answer__button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #ffbc5f, #e9e9e9) padding-box,
+      linear-gradient(to bottom, #ffbc5fdd, #99713977) border-box;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #000;
+    font-family: "mont";
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .answer__input {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    background: transparent;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid #ffbc5f;
+  }
+}

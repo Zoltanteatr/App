@@ -1,0 +1,55 @@
+.root {
+  position: relative;
+  width: fit-content;
+  max-width: 70%;
+
+  &.user {
+    align-self: flex-end;
+  }
+}
+
+.message {
+  min-width: 100px;
+  height: 100%;
+  border-radius: 20px;
+  padding: 13px 15px 7px 15px;
+  background: #2d2d2d;
+  color: #ffffff99;
+  position: relative;
+  margin-top: 10px;
+  word-wrap: break-word;
+  z-index: 1;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  &.user {
+    background: linear-gradient(280.64deg, #ffffff -32.6%, #feac39 89.94%);
+    color: #000000eb;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hook {
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  background: #2d2d2d;
+  height: 15px;
+  border-radius: 10px 10px 20px 20px;
+  z-index: 0;
+  
+  &.user {
+    left: 10px;
+    background: linear-gradient(280.64deg, #ffffff -32.6%, #feac39 89.94%);
+  }
+}
+
+.message_image {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}

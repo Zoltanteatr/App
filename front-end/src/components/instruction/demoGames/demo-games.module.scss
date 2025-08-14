@@ -1,0 +1,111 @@
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+.game__swiper {
+  width: 100%;
+  padding-bottom: 100px;
+  margin-top: 20px;
+  padding-left: 20px;
+  position: relative;
+  padding-right: 20px;
+
+  :global {
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #ffbc5f;
+      background: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+      }
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #ffbc5f;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+
+      &-active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.game {
+  width: 100%;
+  background: #0f0f0f37;
+  border-radius: 20px;
+  backdrop-filter: blur(34px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .game__preview {
+    background: #1a1c1db5;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #1c1d20;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.game__name {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.slide {
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.loading,
+.error,
+.empty {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

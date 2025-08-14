@@ -1,0 +1,139 @@
+.controlls {
+    position: absolute;
+    left: 20px;
+    height: 200px;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    .play__controll {
+        height: 40px;
+        width: 40px;
+        transition: .5s;
+
+        &.playing {
+            opacity: 0;
+            width: 40%;
+            height: 40%;
+        }
+    }
+
+    .bottom__controlls {
+        bottom: 0;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .vol {
+            display: flex;
+            align-items: center;
+
+            .game__volume {
+                appearance: none; // Убираем стандартные стили
+                width: 70px; // Ширина ползунка
+                height: 20px; // Высота ползунка
+                background: transparent; // Прозрачный фон
+                outline: none; // Убираем обводку при фокусе
+                margin-left: 10px;
+                cursor: pointer; // Курсор-указатель
+
+                // Стилизация трека (дорожки)
+                &::-webkit-slider-runnable-track {
+                    width: 100%;
+                    height: 4px; // Высота трека
+                    background: #646365; // Цвет трека
+                    border-radius: 2px; // Закругление углов трека
+                }
+
+                // Стилизация бегунка (ползунка)
+                &::-webkit-slider-thumb {
+                    appearance: none; // Убираем стандартные стили
+                    width: 16px; // Ширина бегунка
+                    height: 16px; // Высота бегунка
+                    background: #997139; // Цвет бегунка
+                    border-radius: 50%; // Делаем бегунок круглым
+                    margin-top: -6px; // Центрируем бегунок относительно трека
+                    cursor: pointer; // Курсор-указатель
+                    transition: background 0.2s; // Плавное изменение цвета
+                }
+
+                // Стилизация для Firefox
+                &::-moz-range-track {
+                    width: 100%;
+                    height: 4px;
+                    background: #997139;
+                    border-radius: 2px;
+                }
+
+                &::-moz-range-thumb {
+                    width: 16px;
+                    height: 16px;
+                    background: #997139;
+                    border-radius: 50%;
+                    border: none; // Убираем стандартную обводку
+                    cursor: pointer;
+                    transition: background 0.2s;
+                }
+
+                // Стилизация для Microsoft Edge и IE
+                &::-ms-track {
+                    width: 100%;
+                    height: 4px;
+                    background: transparent;
+                    border-color: transparent;
+                    color: transparent;
+                }
+
+                &::-ms-fill-lower {
+                    background: #ccc;
+                    border-radius: 2px;
+                }
+
+                &::-ms-fill-upper {
+                    background: #ccc;
+                    border-radius: 2px;
+                }
+
+                &::-ms-thumb {
+                    width: 16px;
+                    height: 16px;
+                    background: #007bff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background 0.2s;
+                }
+
+                // Изменение цвета бегунка при наведении
+                &:hover::-webkit-slider-thumb {
+                    background: #0056b3;
+                }
+
+                &:hover::-moz-range-thumb {
+                    background: #0056b3;
+                }
+
+                &:hover::-ms-thumb {
+                    background: #0056b3;
+                }
+            }
+
+            .voulme__img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+
+
+        .fullscreen {
+            height: 30px;
+            width: 30px;
+        }
+
+
+    }
+}
